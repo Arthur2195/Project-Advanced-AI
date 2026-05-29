@@ -37,7 +37,7 @@ class RMSNorm(nn.Module):
     def __init__(self, cfg):
         super().__init__()
 
-        # self.weight = ...    # learnable scale of shape [hidden_dim], initialized to
+        self.weight = nn.Parameter(torch.ones(hidden_dim))    # learnable scale of shape [hidden_dim], initialized to
         #                      # all ones (use nn.Parameter)
         # self.rms_eps = ...
 
